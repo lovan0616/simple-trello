@@ -1,8 +1,18 @@
 <template>
-  <div id="app">
-    <router-view/>
+  <div id="app" class="w-screen h-screen flex flex-col-reverse  lg:flex-row">
+    <Nav />
+    <router-view class="flex-1 bg-gray-50"/>
   </div>
 </template>
+
+<script>
+import Nav from './components/Nav'
+export default {
+  components: {
+    Nav
+  }
+}
+</script>
 
 <style>
 #app {

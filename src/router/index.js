@@ -7,9 +7,24 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'home',
     component: Home
   },
+  {
+    path: '/board',
+    name: 'board',
+    component: () => import('../views/Board.vue')
+  },
+  {
+    path:'/project/:id',
+    name: 'project',
+    component: () => import('../views/Project.vue')
+  },
+  {
+    path: '/task/:id',
+    name: 'task',
+    component: () => import('../views/TaskDetail.vue')
+  }
 ]
 
 const router = new VueRouter({
